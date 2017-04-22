@@ -24,20 +24,20 @@ RUN apt-get update
 
 # install some other essential packages for building bitcoin
 RUN apt-get install --yes \
-  autoconf \ 
-  autotools-dev \ 
-	bsdmainutils \ 
-	build-essential \ 
-	gcc \ 
-	git \ 
-	libboost-all-dev \ 
-	libssl-dev \ 
+  autoconf \
+  autotools-dev \
+	bsdmainutils \
+	build-essential \
+	gcc \
+	git \
+	libboost-all-dev \
+	libssl-dev \
   libevent-dev \
-	libtool \ 
+	libtool \
   make \
-	pkg-config \ 
+	pkg-config \
 	sudo \
-  vim  
+  vim
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
